@@ -1,6 +1,8 @@
 import pyautogui
 import time
 
+pyautogui.FAILSAFE = False
+
 def move_mouse(interval, duration):
     end_time = time.time() + duration
     while time.time() < end_time:
@@ -10,4 +12,4 @@ def move_mouse(interval, duration):
         time.sleep(interval)
 
 # Parameters: interval between movements (in seconds) and total duration (in seconds)
-move_mouse(30, 3600)  # Move every 30 seconds for 1 hour
+move_mouse(30, 86400)  # Move every 30 seconds for 12 hours
